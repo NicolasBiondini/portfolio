@@ -1,0 +1,80 @@
+.containerBackground {
+    background-color: #212529;
+    color: #F8F9FA;
+    height: auto;
+    margin-top: 1000px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 48px;
+}
+
+.containerModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    overflow-y: scroll;
+}
+
+.conatiner {
+    max-width: 1220px;
+    margin: auto;
+    height: 100%;
+}
+
+.imageContainer {
+    max-width: 1000px;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    margin-top: 32px;
+}
+
+.buttonBack {
+    font-size: 32px;
+    padding-top: 16px;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 32px;
+    align-items: baseline;
+}
+
+@media (max-width: 1100px) {
+    .containerBackground {
+        margin-top: 900px;
+        padding: 0;
+    }
+    .imageContainer {
+        width: 90%;
+    }
+    .titleContainer {
+        margin: auto;
+        width: 90%;
+    }
+}
+
+@media (max-width: 535px) {
+    .containerBackground {
+        margin-top: 600px;
+    }
+    .imageContainer {
+        width: 90%;
+    }
+}

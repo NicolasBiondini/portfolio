@@ -1,9 +1,12 @@
-html,
-body {
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
+html, body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Plus Jakarta Display', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #F8F9FA;
+  color: #212529;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -13,4 +16,54 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+  outline: none;
+  border: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F8F9FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ADB5BD;
+  border-radius: 6px;
+}
+
+@media (max-width: 950px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 32px;
+  }
 }

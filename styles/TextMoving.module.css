@@ -1,0 +1,42 @@
+.container {
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+
+.light {
+    color: #F8F9FA;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    animation: animate 20s linear infinite;
+}
+
+.spanText {
+    font-size: 24px;
+    font-weight: bold;
+    animation: animateTwo 20s linear infinite;
+    animation-delay: 10s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animateTwo {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}

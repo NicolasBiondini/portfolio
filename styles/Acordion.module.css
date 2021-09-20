@@ -1,0 +1,33 @@
+.acordionItem {
+    margin-top: 16px;
+}
+
+.acordionItem:hover {
+    cursor: pointer;
+}
+
+.titleItem {
+    transition: 200ms ease-out;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.titleItemOpened {
+    transition: 100ms ease-in;
+    color: #6C757D;
+}
+
+.titleItemOpenedDark {
+    color: #CED4DA
+}
+
+.span {
+    font-size: 32px;
+    font-weight: normal;
+    margin-right: 8px;
+}
+
+.itemOpened {
+    padding-top: 8px;
+    font-size: 24px;
+}

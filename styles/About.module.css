@@ -1,0 +1,56 @@
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 24px;
+    padding-top: 60px;
+    margin-top: 240px;
+    transition: 0.8s ease;
+    overflow-x: hidden;
+}
+
+.containerMargin {
+    margin-top: 32px;
+}
+
+.containerDark {
+    color: #F8F9FA;
+}
+
+.skills {
+    grid-column: 1/5;
+}
+
+.aboutText {
+    grid-column: 5/12;
+}
+
+.text {
+    font-size: 24px;
+}
+
+@media (max-width: 1219px) {
+    .container {
+        column-gap: 16px;
+        margin-left: 32px;
+    }
+}
+
+@media (max-width: 950px) {
+    .container {
+        margin-top: 0;
+        padding-bottom: 48px;
+    }
+}
+
+@media (max-width: 725px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+    .text {
+        font-size: 16px;
+    }
+}

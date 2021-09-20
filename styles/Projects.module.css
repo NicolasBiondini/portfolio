@@ -1,0 +1,28 @@
+.container {
+    min-height: 100vh;
+    color: #F8F9FA;
+}
+
+.projectsContainer {
+    max-width: 1220px;
+    margin: auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.textPortfolio {
+    padding-top: 64px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.clickHere {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+@media (max-width: 1219px) {
+    .projectsContainer {
+        margin: 0 32px;
+    }
+}

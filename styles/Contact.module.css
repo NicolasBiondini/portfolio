@@ -1,0 +1,150 @@
+.container {
+    max-width: 1220px;
+    height: 100vh;
+    margin: auto;
+    color: #F8F9FA;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 24px;
+}
+
+.formContainer {
+    grid-column: 1/7;
+    align-self: center;
+}
+
+.connectContainer {}
+
+.preConnect {
+    font-size: 24px;
+    margin: 0;
+}
+
+.connect {
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.form {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin-left: 8px;
+}
+
+.formInputs {
+    margin-top: 24px;
+    height: 48px;
+    width: 90%;
+    background-color: #212529;
+    color: #CED4DA;
+    font-size: 24px;
+    border-bottom: 4px solid #F8F9FA;
+}
+
+.formInputs::placeholder {
+    color: #CED4DA;
+}
+
+.arrowSend {
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    padding-left: 5%;
+}
+
+.sendForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: flex-end;
+}
+
+.social {
+    grid-column: 8/13;
+    align-self: center;
+}
+
+.socialLinksContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.socialLinks {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 48px;
+}
+
+.email {
+    margin-top: 48px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media (max-width: 1219px) {
+    .formContainer {
+        grid-column: 2/7;
+    }
+    .social {
+        grid-column: 7/12;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        max-width: 500px;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .formContainer {
+        align-self: flex-start;
+    }
+    .form {
+        max-width: 100%;
+    }
+    .social {
+        padding-top: 50px;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 565px) {
+    .container {
+        margin: auto;
+        height: 60vh;
+        max-width: 100%;
+        margin: 0px 32px;
+    }
+    .preConnect {
+        font-size: 16px;
+    }
+    .connect {
+        font-size: 48px;
+    }
+    .form {
+        margin-top: 32px;
+    }
+    .formInputs {
+        margin-top: 24px;
+        height: 32px;
+        width: 80%;
+        background-color: #212529;
+        color: #CED4DA;
+        font-size: 16px;
+        border-bottom: 4px solid #F8F9FA;
+    }
+    .socialLinks {
+        font-size: 16px;
+        margin-right: 16px;
+    }
+    .email {
+        font-size: 16px;
+    }
+}
