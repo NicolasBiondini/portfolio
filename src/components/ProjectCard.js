@@ -16,7 +16,9 @@ export default function ProjectCard({
   text,
   reverse,
   path,
+  layoutId,
   onOpen,
+  data,
 }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.45 });
@@ -87,11 +89,15 @@ export default function ProjectCard({
     visible: { x: 0, opacity: 1, transition: { delay: 0.1, duration: 1.5 } },
   };
 
+  const handleClick = () => {
+    onOpen(data);
+  };
+
   return (
-    <motion.div ref={ref} layout className={styles.container}>
+    <motion.div key={number} ref={ref} layout className={styles.container}>
       <motion.div
-        layoutId="imageOne"
-        key="imageProject"
+        layoutId={layoutId}
+        key={layoutId}
         animate={controls}
         initial="hidden"
         exit={{ opacity: 0, transition: { duration: 1, delay: 0 } }}
@@ -101,7 +107,7 @@ export default function ProjectCard({
         }`}
       >
         <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
-          <a onClick={onOpen}>
+          <a onClick={handleClick}>
             <Image src={imagePicture} layout={"responsive"} />
           </a>
         </Tilt>
@@ -134,7 +140,7 @@ export default function ProjectCard({
         </motion.p>
         <motion.a
           key="viewProject"
-          onClick={onOpen}
+          onClick={handleClick}
           animate={controls}
           initial="hidden"
           exit={{ opacity: 0, transition: { duration: 1, delay: 0 } }}

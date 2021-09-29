@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import debunce from "lodash.debounce";
+
 // Hook
 export default function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
@@ -17,12 +19,13 @@ export default function useWindowSize() {
         height: window.innerHeight,
       });
     }
+    const debuncedHandleResize = debunce(handleResize, 700);
     // Add event listener
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", debuncedHandleResize);
     // Call handler right away so state gets updated with initial window size
     handleResize();
     // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", debuncedHandleResize);
   }, []); // Empty array ensures that effect is only run on mount
   return windowSize;
 }

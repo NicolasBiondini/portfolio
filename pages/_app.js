@@ -6,11 +6,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps, router }) {
   return (
     <AnimateSharedLayout type="crossfade">
-      <AnimatePresence exitBeforeEnter>
-        <motion.div layout key={router.route}>
-          <Component {...pageProps} />
-        </motion.div>
-      </AnimatePresence>
+      <Component {...pageProps} />
     </AnimateSharedLayout>
   );
 }

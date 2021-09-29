@@ -2,18 +2,16 @@
     margin-top: 16px;
 }
 
-.acordionItem:hover {
-    cursor: pointer;
-}
-
 .titleItem {
     transition: 200ms ease-out;
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    align-items: baseline;
 }
 
 .titleItemOpened {
-    transition: 100ms ease-in;
+    transition: 200ms ease-in;
     color: #6C757D;
 }
 
@@ -22,9 +20,17 @@
 }
 
 .span {
-    font-size: 32px;
+    position: relative;
+    font-size: 24px;
     font-weight: normal;
+    align-self: center;
     margin-right: 8px;
+    padding-top: 4px;
+    transition: transform 300ms ease-in-out;
+}
+
+.spanOpened {
+    transform: rotate(-90deg);
 }
 
 .itemOpened {

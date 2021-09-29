@@ -9,8 +9,12 @@ import ProjectCard from "./ProjectCard";
 import TextMoving from "./TextMoving";
 
 import imagePicture from "../../public/images/image.png";
+import imagePicture2 from "../../public/images/imagen2.png";
+import imagePicture3 from "../../public/images/imagen3.png";
 
 import styles from "../../styles/Projects.module.css";
+
+import { projects } from "../data";
 
 export default function Projects({ onOpen }) {
   const controls = useAnimation();
@@ -32,16 +36,23 @@ export default function Projects({ onOpen }) {
           }
           light={true}
         />
-        <ProjectCard
-          onOpen={onOpen}
-          imagePicture={imagePicture}
-          text={
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
-          }
-          title={"Project 1"}
-          number={"01."}
-          path={"project-one"}
-        />
+        {projects.map((project) => {
+          return (
+            <ProjectCard
+              key={project.title}
+              onOpen={onOpen}
+              imagePicture={project.image}
+              text={project.text}
+              title={project.title}
+              number={project.number}
+              path={project.link}
+              layoutId={project.layoutId}
+              data={project}
+              reverse={project.title === "Project 2" && true}
+            />
+          );
+        })}
+
         {/**
   
   <ProjectCard

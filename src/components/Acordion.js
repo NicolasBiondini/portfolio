@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-import { motion, AnimatedSharedLayout, AnimatePresence } from "framer-motion";
-
+import { motion, AnimatePresence } from "framer-motion";
+import { FaChevronDown } from "@react-icons/all-files/fa/FaChevronDown";
 import styles from "../../styles/Acordion.module.css";
 
 export default function Acordion({ light, data }) {
@@ -15,6 +15,7 @@ export default function Acordion({ light, data }) {
                 title={item.title}
                 skills={item.skills}
                 id={item.id}
+                openItem={item.openItem}
                 light={light}
               />
             </li>
@@ -25,11 +26,11 @@ export default function Acordion({ light, data }) {
   );
 }
 
-function AcordionItem({ title, skills, id, light }) {
+function AcordionItem({ title, skills, id, openItem, light }) {
   const [opened, setOpened] = useState(false);
 
   useEffect(() => {
-    if (id === 1) {
+    if (id === 1 || openItem) {
       setOpened(true);
     }
   }, []);
@@ -46,7 +47,10 @@ function AcordionItem({ title, skills, id, light }) {
           opened & light && styles.titleItemOpenedDark
         }`}
       >
-        <span className={styles.span}>-</span> {title}
+        <div className={`${styles.span} ${opened && styles.spanOpened}`}>
+          <FaChevronDown />
+        </div>
+        <div>{title}</div>
       </div>
       <AnimatePresence initial={false}>
         {opened && <AcordionOpened skills={skills} />}
@@ -72,6 +76,7 @@ function AcordionOpened({ skills }) {
       {skills.map((skill) => {
         return (
           <motion.li
+            key={skill}
             variants={{
               collapsed: { opacity: 0 },
               open: { opacity: 1, scale: 1 },

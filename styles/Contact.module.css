@@ -49,7 +49,7 @@
 }
 
 .arrowSend {
-    font-size: 48px;
+    font-size: 28px;
     margin: 0;
     padding: 0;
     padding-left: 5%;
@@ -73,16 +73,42 @@
     justify-content: center;
 }
 
+.socialMediaContainer {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 95%;
+}
+
 .socialLinks {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
-    margin-right: 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .email {
     margin-top: 48px;
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.emailIcon {
+    font-size: 32px;
+    margin-right: 5px;
+    align-self: center;
+}
+
+.emailIconMargin {
+    margin-right: 15px;
 }
 
 @media (max-width: 1219px) {
@@ -118,7 +144,7 @@
 @media (max-width: 565px) {
     .container {
         margin: auto;
-        height: 60vh;
+        min-height: 60vh;
         max-width: 100%;
         margin: 0px 32px;
     }
@@ -140,11 +166,43 @@
         font-size: 16px;
         border-bottom: 4px solid #F8F9FA;
     }
+    .socialMediaContainer {
+        margin-top: 16px;
+    }
     .socialLinks {
         font-size: 16px;
         margin-right: 16px;
     }
     .email {
         font-size: 16px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .socialMediaContainer {
+        margin-top: 0px;
+    }
+    .socialLinks {
+        font-size: 16px;
+        margin-right: 8px;
+        margin-top: 8px;
+    }
+    .email {
+        font-size: 14px;
+        align-items: center;
+    }
+    .socialMediaContainer {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: stretch;
+        width: 100%;
+    }
+    .emailIcon {
+        font-size: 24px;
+        margin-right: 5px;
+        align-self: center;
     }
 }

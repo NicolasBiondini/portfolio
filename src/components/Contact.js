@@ -1,5 +1,12 @@
 import Link from "next/link";
 
+import { FaPaperPlane } from "@react-icons/all-files/fa/FaPaperPlane";
+import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
+import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn";
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
+
+import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
+
 import TextMoving from "./TextMoving";
 import styles from "../../styles/Contact.module.css";
 
@@ -25,7 +32,9 @@ export default function Contact() {
               type={"text"}
               placeholder={"message"}
             />
-            <span className={styles.arrowSend}>{" >"} </span>
+            <span className={styles.arrowSend}>
+              <FaPaperPlane />{" "}
+            </span>
           </div>
         </form>
       </div>
@@ -36,21 +45,44 @@ export default function Contact() {
           }
         />
         <div className={styles.socialLinksContainer}>
-          <div>
-            <Link href={"/"}>
-              <a className={styles.socialLinks}>
-                <span>-</span> Instagram
-              </a>
-            </Link>
-            <Link href={"/"}>
-              <a className={styles.socialLinks}>
-                <span>-</span> Linkedin
-              </a>
-            </Link>
+          <div className={styles.email}>
+            <span className={`${styles.emailIcon} ${styles.emailIconMargin} `}>
+              <FaEnvelope />
+            </span>
+            nicolasbiondiniwork@gmail.com
           </div>
-          <p className={styles.email}>
-            <span>-</span> nicolasbiondiniwork@gmail.com
-          </p>
+          <div className={styles.socialMediaContainer}>
+            <a
+              href={"https://www.instagram.com/nicolasbiondini/"}
+              target="_blank"
+              className={styles.socialLinks}
+            >
+              <span className={styles.emailIcon}>
+                <FaInstagram />
+              </span>
+              Instagram
+            </a>
+            <a
+              href={"https://twitter.com/BiondiniNicolas"}
+              target="_blank"
+              className={styles.socialLinks}
+            >
+              <span className={styles.emailIcon}>
+                <FaTwitter />
+              </span>
+              Twitter
+            </a>
+            <a
+              href={"https://www.linkedin.com/in/nicolas-biondini/"}
+              target="_blank"
+              className={styles.socialLinks}
+            >
+              <span className={styles.emailIcon}>
+                <FaLinkedinIn />
+              </span>
+              Linkedin
+            </a>
+          </div>
         </div>
       </div>
     </div>

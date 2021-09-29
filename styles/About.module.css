@@ -11,6 +11,7 @@
 
 .containerMargin {
     margin-top: 32px;
+    min-height: 0;
 }
 
 .containerDark {
@@ -40,6 +41,11 @@
     .container {
         margin-top: 0;
         padding-bottom: 48px;
+    }
+    .containerMargin {
+        min-height: 0;
+        padding-top: 40px;
+        margin-top: 0px;
     }
 }
 

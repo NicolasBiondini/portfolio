@@ -6,8 +6,11 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 import { DonutCursorProvider, DonutConsumer } from "react-donut-cursor";
+import AnimatedCursor from "react-animated-cursor";
+import { FaTimes } from "@react-icons/all-files/fa/FaTimes";
 
 import About from "./About";
+import CursorPortal from "./CursorPortal";
 
 import Picture from "../../public/images/image.png";
 
@@ -15,7 +18,7 @@ import styles from "../../styles/ProjectPage.module.css";
 
 import { dataProject01 } from "../../src/data";
 
-export default function Modal({ show, onClose }) {
+export default function Modal({ show, onClose, data }) {
   const [isBrowser, setIsBrowser] = useState(false);
   useEffect(() => {
     setIsBrowser(true);
@@ -28,7 +31,15 @@ export default function Modal({ show, onClose }) {
 
   const projectContent = show ? (
     <div className={styles.containerModal}>
-      <ProjectForModal onClose={handleCloseClick} />
+      <ProjectForModal
+        onClose={handleCloseClick}
+        image={data.image}
+        title={data.title}
+        link={data.link}
+        layoutId={data.layoutId}
+        number={data.number}
+        data={data.data}
+      />
     </div>
   ) : null;
 
@@ -42,7 +53,15 @@ export default function Modal({ show, onClose }) {
   }
 }
 
-function ProjectForModal({ onClose }) {
+function ProjectForModal({
+  onClose,
+  image,
+  title,
+  link,
+  layoutId,
+  number,
+  data,
+}) {
   const easing = [0.6, -0.05, 0.01, 0.99];
 
   const fadeUp = {
@@ -68,16 +87,16 @@ function ProjectForModal({ onClose }) {
       className={styles.containerBackground}
     >
       <div className={styles.conatiner}>
-        <a onClick={onClose} className={styles.buttonBack}>
-          x
-        </a>
+        <div onClick={onClose} className={styles.buttonBack}>
+          <FaTimes />
+        </div>
 
         <motion.div
-          layoutId="imageOne"
-          key="imageProjectPage"
+          layoutId={layoutId}
+          key={layoutId}
           className={styles.imageContainer}
         >
-          <Image src={Picture} layout={"responsive"} />
+          <Image src={image} layout={"responsive"} />
         </motion.div>
         <motion.div
           variants={fadeUp}
@@ -86,14 +105,16 @@ function ProjectForModal({ onClose }) {
           exit={{ opacity: 0, transition: { duration: 1, delay: 0 } }}
           className={styles.titleContainer}
         >
-          <h1>01. Project one</h1>
+          <h1>
+            {number} {title}
+          </h1>
           <div className={styles.button}>
             Live demo <span>{">"}</span>
           </div>
         </motion.div>
         <About
           light={true}
-          data={dataProject01}
+          data={data}
           itsIndex={true}
           titleOne={
             "TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - "

@@ -2,7 +2,7 @@
     background-color: #212529;
     color: #F8F9FA;
     height: auto;
-    margin-top: 1000px;
+    margin-top: 900px;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,8 @@
 
 .buttonBack {
     font-size: 32px;
-    padding-top: 16px;
+    padding-top: 32px;
+    text-align: end;
 }
 
 .titleContainer {
@@ -58,8 +59,11 @@
 
 @media (max-width: 1100px) {
     .containerBackground {
-        margin-top: 900px;
+        margin-top: 1000px;
         padding: 0;
+    }
+    .buttonBack {
+        padding-right: 32px;
     }
     .imageContainer {
         width: 90%;
@@ -68,13 +72,76 @@
         margin: auto;
         width: 90%;
     }
+    .conatiner {
+        width: 800px;
+    }
 }
 
-@media (max-width: 535px) {
+@media (max-width: 845px) {
     .containerBackground {
-        margin-top: 600px;
+        margin-top: 1100px;
+        padding: 0;
+    }
+    .conatiner {
+        width: 700px;
+    }
+}
+
+@media (max-width: 725px) {
+    .containerBackground {
+        margin-top: 800px;
+        padding: 0;
+    }
+    .conatiner {
+        width: 600px;
+    }
+}
+
+@media (max-width: 635px) {
+    .containerBackground {
+        margin-top: 1100px;
     }
     .imageContainer {
         width: 90%;
+    }
+    .conatiner {
+        width: 385px;
+    }
+}
+
+@media (max-width: 424px) {
+    .buttonBack {
+        padding-top: 8px;
+        padding-right: 8px;
+    }
+    .containerBackground {
+        margin-top: 1300px;
+    }
+    .imageContainer {
+        width: 90%;
+    }
+    .conatiner {
+        width: 300px;
+    }
+    .titleContainer {
+        display: flex;
+        height: 125px;
+        flex-direction: column;
+        margin: auto;
+        justify-content: space-around;
+        padding-top: 16px;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 335px) {
+    .containerBackground {
+        margin-top: 1350px;
+    }
+    .imageContainer {
+        width: 90%;
+    }
+    .conatiner {
+        width: 250px;
     }
 }

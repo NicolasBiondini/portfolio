@@ -3,7 +3,7 @@ import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
-import profile from "../../public/images/profile.jpg";
+import profile from "../../public/images/profile.webp";
 import styles from "../../styles/Header.module.css";
 
 export default function Header() {
@@ -29,7 +29,7 @@ export default function Header() {
         initial={{ x: 200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: -200, opacity: 0, transition: { duration: 0, delay: 0 } }}
-        transition={{ delay: 1.6, duration: 1.2 }}
+        transition={{ delay: 1.4, duration: 1.2 }}
         className={styles.imageContainer}
         key={"imageHeader"}
       >

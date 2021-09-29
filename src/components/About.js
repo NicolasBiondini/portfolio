@@ -37,7 +37,6 @@ export default function About({
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-      console.log("visible");
     }
   }, [controls, inView]);
 

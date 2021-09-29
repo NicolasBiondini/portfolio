@@ -1,3 +1,15 @@
+.light {
+    color: #F8F9FA;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    animation: animate 48s linear infinite;
+}
+
+/*
+
 .container {
     width: 100px;
     overflow: hidden;
@@ -6,26 +18,27 @@
     white-space: nowrap;
 }
 
-.light {
-    color: #F8F9FA;
-}
-
-.text {
-    font-size: 24px;
-    font-weight: bold;
-    animation: animate 20s linear infinite;
-}
 
 .spanText {
     font-size: 24px;
     font-weight: bold;
-    animation: animateTwo 20s linear infinite;
-    animation-delay: 10s;
+    white-space: nowrap;
+    animation: animateTwo 48s linear infinite;
+    animation-delay: 24s;
+}
+
+/*
+.spanText2 {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    animation: animateTwo 48s linear infinite;
+    animation-delay: 32s;
 }
 
 @keyframes animate {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
     100% {
         transform: translateX(-100%);
@@ -37,6 +50,7 @@
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(-200%);
+        transform: translateX(-100%);
     }
 }
+*/

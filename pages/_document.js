@@ -11,9 +11,11 @@ class MyDocument extends Document {
       <Html>
         <Head />
         <body>
-          <Main />
-          <NextScript />
-          <div id="modal-root"></div>
+          <div id="cursor-root">
+            <Main />
+            <NextScript />
+            <div id="modal-root"></div>
+          </div>
         </body>
       </Html>
     );
