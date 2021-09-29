@@ -63,7 +63,7 @@ export default function Home() {
       {loader ? (
         <Loader />
       ) : (
-        <Layout nav={true} light={light} data={data}>
+        <Layout nav={true} key={"layout"} light={light} data={data}>
           <div
             className={`${styles.fatherContainerBackground} ${
               light && styles.fatherContainerBackgroundDark

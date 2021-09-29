@@ -11,7 +11,6 @@ export default function Layout({
   light,
   children,
   nav = false,
-  key,
   modalOpen,
 }) {
   return (

@@ -8,8 +8,8 @@ export default function Loader() {
   return (
     <motion.div
       exit={{ y: -1000, transition: { duration: 0.6, delay: 0 } }}
-      key="loader"
       className={style.container}
+      key="loader"
     >
       <Head>
         <title>Nicolás Portfolio</title>
