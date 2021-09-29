@@ -1,22 +1,16 @@
 import ReactDOM from "react-dom";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
 
 import { motion } from "framer-motion";
 import { DonutCursorProvider, DonutConsumer } from "react-donut-cursor";
-import AnimatedCursor from "react-animated-cursor";
 import { FaTimes } from "@react-icons/all-files/fa/FaTimes";
 
 import About from "./About";
-import CursorPortal from "./CursorPortal";
-
-import Picture from "../../public/images/image.png";
 
 import styles from "../../styles/ProjectPage.module.css";
-
-import { dataProject01 } from "../../src/data";
 
 export default function Modal({ show, onClose, data }) {
   const [isBrowser, setIsBrowser] = useState(false);
