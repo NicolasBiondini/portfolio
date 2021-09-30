@@ -16,7 +16,7 @@ import styles from "../../styles/Projects.module.css";
 
 import { projects } from "../data";
 
-export default function Projects({ onOpen }) {
+export default function Projects({ onOpen, light }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.35 });
 
@@ -28,13 +28,17 @@ export default function Projects({ onOpen }) {
   }, [controls, inView]);
 
   return (
-    <div id={"projects"} className={styles.container}>
+    <div
+      id={"projects"}
+      className={`${styles.container} ${!light && styles.containerLight}`}
+    >
       <div className={styles.projectsContainer}>
         <TextMoving
           text={
             " PROJECTS - PROJECTS - PROJECTS - PROJECTS - PROJECTS - PROJECTS - PROJECTS - PROJECTS - PROJECTS - PROJECTS - PROJECTS - PROJECTS - "
           }
-          light={true}
+          light={light}
+          reverse={true}
         />
         {projects.map((project) => {
           return (

@@ -53,6 +53,7 @@
     .container {
         grid-template-columns: repeat(12, 1fr);
         column-gap: 16px;
+        height: 90vh;
     }
     .text {
         grid-column: 2 / 11;
@@ -67,7 +68,6 @@
     .container {
         grid-template-columns: repeat(12, 21px);
         column-gap: 10px;
-        height: 50vh;
     }
     .text {
         grid-column: 2 / 11;

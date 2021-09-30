@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 import styles from "../../styles/TextMoving.module.css";
 
-export default function TextMoving({ text, light }) {
+export default function TextMoving({ text, light, reverse }) {
   return (
     <Marquee
       style={{
@@ -12,7 +12,7 @@ export default function TextMoving({ text, light }) {
       gradient={false}
       speed={30}
     >
-      <h3 className={`${styles.text} ${light && styles.light}`}>{text} </h3>
+      <h3 className={`${styles.text} ${light && styles.light} `}>{text} </h3>
     </Marquee>
   );
 }

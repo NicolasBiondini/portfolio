@@ -89,7 +89,7 @@
 
 @media (max-width: 725px) {
     .containerBackground {
-        margin-top: 800px;
+        margin-top: 900px;
         padding: 0;
     }
     .conatiner {
@@ -115,7 +115,7 @@
         padding-right: 8px;
     }
     .containerBackground {
-        margin-top: 1300px;
+        margin-top: 1150px;
     }
     .imageContainer {
         width: 90%;
@@ -136,7 +136,7 @@
 
 @media (max-width: 335px) {
     .containerBackground {
-        margin-top: 1350px;
+        margin-top: 1200px;
     }
     .imageContainer {
         width: 90%;

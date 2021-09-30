@@ -1,6 +1,12 @@
 .container {
     min-height: 100vh;
     color: #F8F9FA;
+    transition: 0.8s ease;
+}
+
+.containerLight {
+    transition: 0.8s ease;
+    color: #212529;
 }
 
 .projectsContainer {

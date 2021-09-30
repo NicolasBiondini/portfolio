@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import useScrollPosition from "@react-hook/window-scroll";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { DonutCursorProvider, DonutConsumer } from "react-donut-cursor";
 import { AnimatePresence } from "framer-motion";
 
@@ -20,11 +20,8 @@ import { data } from "../src/data";
 import CursorPortal from "../src/components/CursorPortal";
 
 export default function Home() {
-  const { width, height } = useWindowSize();
-
-  const scrollY = useScrollPosition();
-
   const [light, setLight] = useState(false);
+
   const [showModal, setShowModal] = useState(false);
   const [loader, setLoader] = useState(true);
   const [modalData, setModalData] = useState({});
@@ -34,6 +31,28 @@ export default function Home() {
     setShowModal(true);
   };
 
+  useScrollPosition(
+    ({ currPos }) => {
+      if (currPos.y <= -1200) {
+        setLight(true);
+      } else {
+        setLight(false);
+      }
+    },
+    [],
+    null,
+    false,
+    500
+  );
+
+  /**
+ *   
+  const scrollY = useScrollPosition(60);
+
+  const { width } = useWindowSize();
+
+  {width >= 950 && <CircleText />}
+
   useEffect(() => {
     if (scrollY >= 1200) {
       setLight(true);
@@ -41,6 +60,7 @@ export default function Home() {
       setLight(false);
     }
   }, [scrollY]);
+ */
 
   useEffect(() => {
     setTimeout(() => {
@@ -72,8 +92,6 @@ export default function Home() {
             <div className={styles.container}>
               <Header />
 
-              {width >= 950 && <CircleText />}
-
               <About
                 light={light}
                 data={data}
@@ -83,7 +101,7 @@ export default function Home() {
                 animate={true}
                 itsIndex={false}
               />
-              <Projects onOpen={handleOpenModal} />
+              <Projects onOpen={handleOpenModal} light={light} />
               <Modal
                 onClose={() => setShowModal(false)}
                 show={showModal}
