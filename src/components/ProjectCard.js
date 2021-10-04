@@ -21,7 +21,7 @@ export default function ProjectCard({
   data,
 }) {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.45 });
+  const [ref, inView] = useInView({ threshold: 0.45, triggerOnce: true });
 
   useEffect(() => {
     if (inView) {

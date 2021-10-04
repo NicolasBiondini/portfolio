@@ -5,13 +5,18 @@
     width: 100%;
     background-color: #F8F9FA;
     z-index: 999;
-    transition: 0.8s ease;
+    transition: 0.5s ease;
 }
 
 .realContainerDark {
     background-color: #212529;
     color: #F8F9FA;
-    transition: 0.8s ease;
+    transition: 0.5s ease;
+}
+
+.responsiveIcon {
+    display: none;
+    cursor: pointer;
 }
 
 .container {
@@ -27,6 +32,7 @@
 .itemLogo {
     font-size: 24px;
     font-weight: medium;
+    cursor: pointer;
 }
 
 .navBar {
@@ -42,6 +48,7 @@
     font-weight: medium;
     position: relative;
     height: 32px;
+    cursor: pointer;
 }
 
 .itemnavbar::after {
@@ -80,12 +87,33 @@
         padding-left: 0px;
         padding-right: 0px;
     }
+    .responsiveIcon {
+        display: flex;
+        font-size: 32px;
+        padding-right: 16px;
+    }
+    .navBarResponsive {
+        display: flex;
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
     .navBar {
         display: none;
     }
     .itemLogo {
-        font-size: 16px;
-        padding-left: 10px;
+        font-size: 24px;
+        padding-left: 16px;
         width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .responsiveIcon {
+        font-size: 24px;
+    }
+    .itemLogo {
+        font-size: 16px;
     }
 }

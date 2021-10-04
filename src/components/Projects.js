@@ -8,22 +8,17 @@ import { motion, useAnimation } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import TextMoving from "./TextMoving";
 
-import imagePicture from "../../public/images/image.png";
-import imagePicture2 from "../../public/images/imagen2.png";
-import imagePicture3 from "../../public/images/imagen3.png";
-
 import styles from "../../styles/Projects.module.css";
 
 import { projects } from "../data";
 
 export default function Projects({ onOpen, light }) {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.35 });
+  const [ref, inView] = useInView({ threshold: 0.35, triggerOnce: true });
 
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-      console.log("visible");
     }
   }, [controls, inView]);
 

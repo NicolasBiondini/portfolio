@@ -99,7 +99,7 @@ function ProjectForModal({
           exit={{ opacity: 0, transition: { duration: 1, delay: 0 } }}
           className={styles.titleContainer}
         >
-          <h1>
+          <h1 className={styles.title}>
             {number} {title}
           </h1>
           <div className={styles.button}>
