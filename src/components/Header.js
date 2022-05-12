@@ -38,6 +38,7 @@ export default function Header() {
           layout={"fill"}
           objectFit={"cover"}
           objectPosition={"center 80%"}
+          priority={true}
         />
       </motion.div>
     </div>

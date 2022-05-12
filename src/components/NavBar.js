@@ -19,7 +19,7 @@ export default function NavBar({ light }) {
 
   const fadeDown = {
     initial: {
-      y: -60,
+      y: -30,
       opacity: 0,
     },
     animate: {
@@ -27,6 +27,22 @@ export default function NavBar({ light }) {
       opacity: 1,
       transition: {
         duration: 1.5,
+        ease: easing,
+      },
+    },
+  };
+
+  const fadeDownTwo = {
+    initial: {
+      y: -25,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        delay: 0.5,
         ease: easing,
       },
     },
@@ -73,7 +89,7 @@ export default function NavBar({ light }) {
           </motion.a>
         </Link>
         <motion.div
-          variants={fadeDown}
+          variants={fadeDownTwo}
           onClick={handleClick}
           className={styles.responsiveIcon}
         >

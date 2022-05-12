@@ -5,8 +5,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
-import { DonutCursorProvider, DonutConsumer } from "react-donut-cursor";
 import { FaTimes } from "@react-icons/all-files/fa/FaTimes";
+import { FaAngleDoubleRight } from "@react-icons/all-files/fa/FaAngleDoubleRight";
 
 import About from "./About";
 
@@ -33,6 +33,8 @@ export default function Modal({ show, onClose, data }) {
         layoutId={data.layoutId}
         number={data.number}
         data={data.data}
+        repository={data.repository}
+        component={data.component}
       />
     </div>
   ) : null;
@@ -55,6 +57,8 @@ function ProjectForModal({
   layoutId,
   number,
   data,
+  repository,
+  component,
 }) {
   const easing = [0.6, -0.05, 0.01, 0.99];
 
@@ -102,8 +106,19 @@ function ProjectForModal({
           <h1 className={styles.title}>
             {number} {title}
           </h1>
-          <div className={styles.button}>
-            Live demo <span>{">"}</span>
+          <div className={styles.buttonsContainer}>
+            <a href={link} target="_blank" className={styles.button}>
+              Live Demo{" "}
+              <span>
+                <FaAngleDoubleRight />
+              </span>
+            </a>
+            <a href={repository} target="_blank" className={styles.button}>
+              Repository{" "}
+              <span>
+                <FaAngleDoubleRight />
+              </span>
+            </a>
           </div>
         </motion.div>
         <About
@@ -113,6 +128,7 @@ function ProjectForModal({
           titleOne={
             "TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - TECNOLOGIES - "
           }
+          component={component}
         />
       </div>
     </motion.div>

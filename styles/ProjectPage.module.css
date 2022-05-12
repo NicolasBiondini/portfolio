@@ -2,7 +2,7 @@
     background-color: #212529;
     color: #F8F9FA;
     height: auto;
-    margin-top: 900px;
+    margin-top: 1450px;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -31,6 +31,7 @@
     max-width: 1220px;
     margin: auto;
     height: 100%;
+    min-height: 2300px;
 }
 
 .imageContainer {
@@ -55,16 +56,36 @@
     margin: auto;
     justify-content: space-between;
     padding-top: 32px;
-    align-items: baseline;
+    align-items: center;
 }
 
 .button {
     cursor: pointer;
+    display: flex;
+    align-items: stretch;
+    height: 20px;
+    width: 100%;
+    gap: 4px;
+}
+
+.button span{
+    margin-top: 2px;
+}
+
+.button:hover{
+    color: #5a5a5a;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttonsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 @media (max-width: 1100px) {
     .containerBackground {
-        margin-top: 1000px;
+        margin-top: 1900px;
         padding: 0;
     }
     .buttonBack {
@@ -79,26 +100,30 @@
     }
     .conatiner {
         width: 800px;
+        min-height: 2600px;
     }
 }
 
 @media (max-width: 845px) {
     .containerBackground {
-        margin-top: 1100px;
+        margin-top: 2000px;
         padding: 0;
     }
     .conatiner {
         width: 700px;
+        min-height: 2800px;
+
     }
 }
 
 @media (max-width: 725px) {
     .containerBackground {
-        margin-top: 900px;
+        margin-top: 1100px;
         padding: 0;
     }
     .conatiner {
         width: 600px;
+        min-height: 1800px;
     }
 }
 
@@ -107,7 +132,7 @@
         font-size: 32px;
     }
     .containerBackground {
-        margin-top: 1100px;
+        margin-top: 1300px;
     }
     .imageContainer {
         width: 90%;
@@ -126,13 +151,14 @@
         padding-right: 8px;
     }
     .containerBackground {
-        margin-top: 1150px;
+        margin-top: 1650px;
     }
     .imageContainer {
         width: 90%;
     }
     .conatiner {
-        width: 300px;
+        width: 350px;
+        min-height: 2400px;
     }
     .titleContainer {
         display: flex;

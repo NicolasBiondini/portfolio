@@ -5,6 +5,8 @@ import { FaChevronDown } from "@react-icons/all-files/fa/FaChevronDown";
 import styles from "../../styles/Acordion.module.css";
 
 export default function Acordion({ light, data }) {
+  const [childOpen, setChildOpen] = useState(1);
+
   return (
     <div className={styles.wrapper}>
       <ul className={styles.acordionList}>
@@ -15,8 +17,9 @@ export default function Acordion({ light, data }) {
                 title={item.title}
                 skills={item.skills}
                 id={item.id}
-                openItem={item.openItem}
                 light={light}
+                childOpen={childOpen}
+                setChildOpen={setChildOpen}
               />
             </li>
           );
@@ -26,21 +29,23 @@ export default function Acordion({ light, data }) {
   );
 }
 
-function AcordionItem({ title, skills, id, openItem, light }) {
+function AcordionItem({ title, skills, id, light, childOpen, setChildOpen }) {
   const [opened, setOpened] = useState(false);
 
   useEffect(() => {
-    if (id === 1 || openItem) {
-      setOpened(true);
+    if (id === childOpen) {
+      return setOpened(true);
+    } else if (opened) {
+      return setOpened(false);
     }
-  }, []);
+  }, [childOpen]);
 
   return (
     <div
       className={`${styles.acordionItem} ${
         opened && styles.acordionItemOpened
       }`}
-      onClick={() => setOpened(!opened)}
+      onClick={() => setChildOpen(id)}
     >
       <div
         className={`${styles.titleItem} ${opened && styles.titleItemOpened} ${

@@ -20,23 +20,6 @@ export default function Contact() {
           </p>
           <h6 className={styles.connect}>Let's connect!</h6>
         </div>
-        <form className={styles.form}>
-          <input
-            className={styles.formInputs}
-            type={"email"}
-            placeholder={"e-mail"}
-          />
-          <div className={styles.sendForm}>
-            <input
-              className={styles.formInputs}
-              type={"text"}
-              placeholder={"message"}
-            />
-            <span className={styles.arrowSend}>
-              <FaPaperPlane />{" "}
-            </span>
-          </div>
-        </form>
       </div>
       <div className={styles.social}>
         <TextMoving

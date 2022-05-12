@@ -5,7 +5,7 @@ import TextMoving from "./TextMoving";
 
 import styles from "../../styles/About.module.css";
 
-export default function About({ light, data, titleOne, itsIndex }) {
+export default function About({ light, data, titleOne, itsIndex, component }) {
   const animation = {
     visible: {
       opacity: 1,
@@ -38,33 +38,7 @@ export default function About({ light, data, titleOne, itsIndex }) {
             "ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT - ABOUT -"
           }
         />
-        <p className={styles.text}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum
-        </p>
-        <p className={styles.text}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum
-        </p>
-        <p className={styles.text}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum
-        </p>
-        <p className={styles.text}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum Lorem Ipsum is simply dummy text
-          of the printing and typesetting industry. Lorem Ipsum
-        </p>
-        <p className={styles.text}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum
-        </p>
-        <p className={styles.text}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum
-        </p>
+        {component}
       </div>
     </motion.div>
   );

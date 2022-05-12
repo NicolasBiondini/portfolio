@@ -35,7 +35,7 @@ export default function Projects({ onOpen, light }) {
           light={light}
           reverse={true}
         />
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           return (
             <ProjectCard
               key={project.title}
@@ -47,7 +47,7 @@ export default function Projects({ onOpen, light }) {
               path={project.link}
               layoutId={project.layoutId}
               data={project}
-              reverse={project.title === "Project 2" && true}
+              reverse={index === 1 && true}
             />
           );
         })}
@@ -83,10 +83,17 @@ export default function Projects({ onOpen, light }) {
           ref={ref}
           className={styles.textPortfolio}
         >
-          If you want to see the repository of this portfolio{" "}
-          <Link href={"/"}>
-            <a className={styles.clickHere}>click here</a>
-          </Link>
+          DISCLAIMER: none of these projects are a copy of any tutorial/course.
+          All of them were created by me and without a tutorial guide or
+          anything like that. And If you want to see the repository of this
+          portfolio{" "}
+          <a
+            className={styles.clickHere}
+            href="https://github.com/NicolasBiondini/portfolio"
+            target={"_blank"}
+          >
+            click here
+          </a>
           .
         </motion.p>
       </div>

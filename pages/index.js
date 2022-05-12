@@ -1,23 +1,20 @@
 import { useState, useEffect } from "react";
 
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import { DonutCursorProvider, DonutConsumer } from "react-donut-cursor";
 import { AnimatePresence } from "framer-motion";
 
 import Layout from "../src/components/Layout";
 import Header from "../src/components/Header";
 import About from "../src/components/About";
-import CircleText from "../src/components/CircleText";
 import Modal from "../src/components/Modal";
 import Loader from "../src/components/Loader";
 
-import useWindowSize from "../src/hooks/useWindowsSize";
 import styles from "../styles/Home.module.css";
 import Projects from "../src/components/Projects";
 import Contact from "../src/components/Contact";
 
+import AboutMe from "../src/components/AboutMe";
 import { data } from "../src/data";
-import CursorPortal from "../src/components/CursorPortal";
 
 export default function Home() {
   const [light, setLight] = useState(false);
@@ -63,9 +60,13 @@ export default function Home() {
  */
 
   useEffect(() => {
-    setTimeout(() => {
+    let timer = setTimeout(() => {
       setLoader(false);
     }, 4000);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 
   useEffect(() => {
@@ -100,6 +101,7 @@ export default function Home() {
                 }
                 animate={true}
                 itsIndex={false}
+                component={<AboutMe />}
               />
               <Projects onOpen={handleOpenModal} light={light} />
               <Modal
