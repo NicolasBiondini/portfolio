@@ -11,16 +11,16 @@ function AboutMe() {
       <p>
         I've always been passionate about technology, and in my first year of
         college, I started getting interested in tech business (Silicon Valley,
-        Startups, and that kind of stuff). So <b>parallel to the university</b>,
-        I started to study, on my own, finance, business models, marketing,
+        Startups, and that kind of stuff). So <b>parallel to university</b>, I
+        started to study, on my own, finance, business models, marketing,
         e-commerce, cryptocurrencies, blockchain, and everything that surrounds
-        a <b>startup or tech company</b>.
+        an <b>startup or tech company</b>.
       </p>
       <p>
         This <b>love and passion for tech</b> companies grew and grew so much
         that I wanted to be part of it. I knew a little about business, I knew
         about marketing but still needed the third leg of the table:{" "}
-        <b>to learn how to code</b>. It was frustrating to understand things and
+        <b>learn how to code</b>. It was frustrating to understand things and
         try to contribute to the real world but be limited because you don't
         understand how tech works.
       </p>
@@ -32,9 +32,9 @@ function AboutMe() {
         <b>10 hours per day from Monday to Friday</b>.
       </p>
       <p>
-        I started with a Python book, but after I finished it I felt lost. But
-        then I found a <b>web dev roadmap</b> and started with Harvard’s CS50
-        course, an HTML and CSS book, Free Code Camp certifications, and so on.
+        I started with a Python book, but after I finished it I felt lost. Then
+        I found a <b>web dev roadmap</b> and started with Harvard’s CS50 course,
+        an HTML and CSS book, Free Code Camp certifications, and so on.
       </p>
       <p>
         And here I am today. After all this path I’m confident in myself, with

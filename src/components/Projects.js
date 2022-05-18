@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 
-import Link from "next/link";
-
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 

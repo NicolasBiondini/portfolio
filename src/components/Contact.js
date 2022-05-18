@@ -16,7 +16,7 @@ export default function Contact() {
       <div className={styles.formContainer}>
         <div className={styles.connectContainer}>
           <p className={styles.preConnect}>
-            I'm allways searching for new challenges so
+            I'm always searching for new challenges so
           </p>
           <h6 className={styles.connect}>Let's connect!</h6>
         </div>
