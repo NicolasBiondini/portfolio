@@ -20,7 +20,7 @@ export default function Header() {
         <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} trackOnWindow={true}>
           <span className={styles.spanText}>Hi 👋,</span>
           <h1>
-            I'm Nicolás Biondini and i'm a <u>Frontend Developer</u>
+            I'm Nicolás Biondini and I'm a <u>Frontend Developer</u>
           </h1>
           <p className={styles.email}>nicolasbiondiniwork@gmail.com</p>
         </Tilt>
